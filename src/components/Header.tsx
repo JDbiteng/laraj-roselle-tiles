@@ -1,8 +1,17 @@
 import { Button } from "@/components/ui/button";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 50);
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   const navigation = [
     { name: "Home", href: "#" },
@@ -13,41 +22,82 @@ const Header = () => {
   ];
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-white/90 backdrop-blur-md border-b border-stone-warm shadow-soft">
+    <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
+      scrolled 
+        ? 'bg-white/95 backdrop-blur-xl border-b border-stone-warm shadow-elegant' 
+        : 'bg-white/10 backdrop-blur-md border-b border-white/10'
+    }`}>
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-16">
-          {/* Logo */}
-          <div className="flex-shrink-0">
-            <h1 className="text-2xl font-bold text-primary">LaRaj Tiles</h1>
+        <div className="flex items-center justify-between h-20">
+          {/* Artistic Logo */}
+          <div className="flex-shrink-0 group cursor-pointer">
+            <div className="flex items-center space-x-3">
+              <div className="relative">
+                <div className="w-10 h-10 bg-gradient-to-br from-primary to-gold-accent rounded-lg flex items-center justify-center shadow-marble">
+                  <span className="text-white font-playfair font-bold text-lg">L</span>
+                </div>
+                <div className="absolute -top-1 -right-1 w-3 h-3 bg-gold-accent rounded-full animate-pulse"></div>
+              </div>
+              <div>
+                <h1 className={`text-2xl font-playfair font-bold transition-colors duration-300 ${
+                  scrolled ? 'text-primary' : 'text-white'
+                }`}>
+                  LaRaj Tiles
+                </h1>
+                <p className={`text-xs font-inter transition-colors duration-300 ${
+                  scrolled ? 'text-muted-foreground' : 'text-white/70'
+                } uppercase tracking-wider`}>
+                  Since 2004
+                </p>
+              </div>
+            </div>
           </div>
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex space-x-8">
-            {navigation.map((item) => (
+            {navigation.map((item, index) => (
               <a
                 key={item.name}
                 href={item.href}
-                className="text-marble-dark hover:text-primary transition-colors duration-300 font-medium"
+                className={`relative font-inter font-medium transition-all duration-300 group ${
+                  scrolled 
+                    ? 'text-marble-dark hover:text-primary' 
+                    : 'text-white/90 hover:text-white'
+                }`}
+                style={{ animationDelay: `${index * 100}ms` }}
               >
                 {item.name}
+                <div className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-primary to-gold-accent transition-all duration-300 group-hover:w-full"></div>
               </a>
             ))}
           </nav>
 
-          {/* CTA Button */}
+          {/* Enhanced CTA Button */}
           <div className="hidden md:block">
-            <Button variant="cta" size="sm">
-              Book Consultation
+            <Button 
+              variant={scrolled ? "cta" : "hero"} 
+              size="sm" 
+              className="font-inter font-semibold shadow-elegant hover:shadow-marble transition-all duration-500 group relative overflow-hidden"
+            >
+              <span className="relative z-10 flex items-center">
+                <span className="mr-2 text-sm">📅</span>
+                Book Consultation
+              </span>
+              <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-700"></div>
             </Button>
           </div>
 
-          {/* Mobile menu button */}
+          {/* Enhanced Mobile menu button */}
           <button
             onClick={() => setIsMenuOpen(!isMenuOpen)}
-            className="md:hidden text-marble-dark hover:text-primary transition-colors duration-300"
+            className={`md:hidden transition-colors duration-300 p-2 rounded-lg ${
+              scrolled 
+                ? 'text-marble-dark hover:text-primary hover:bg-stone-warm/20' 
+                : 'text-white hover:text-gold-accent hover:bg-white/10'
+            }`}
             aria-label="Toggle menu"
           >
-            <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <svg className="h-6 w-6 transition-transform duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               {isMenuOpen ? (
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
               ) : (
@@ -57,22 +107,32 @@ const Header = () => {
           </button>
         </div>
 
-        {/* Mobile Navigation */}
+        {/* Enhanced Mobile Navigation */}
         {isMenuOpen && (
-          <div className="md:hidden py-4 border-t border-stone-warm">
-            <nav className="space-y-2">
-              {navigation.map((item) => (
+          <div className="md:hidden py-6 border-t border-stone-warm/20 animate-fade-in">
+            <nav className="space-y-4">
+              {navigation.map((item, index) => (
                 <a
                   key={item.name}
                   href={item.href}
-                  className="block px-3 py-2 text-marble-dark hover:text-primary transition-colors duration-300 font-medium"
+                  className={`block px-4 py-3 rounded-lg font-inter font-medium transition-all duration-300 ${
+                    scrolled
+                      ? 'text-marble-dark hover:text-primary hover:bg-stone-warm/20'
+                      : 'text-white/90 hover:text-white hover:bg-white/10'
+                  }`}
                   onClick={() => setIsMenuOpen(false)}
+                  style={{ animationDelay: `${index * 100}ms` }}
                 >
                   {item.name}
                 </a>
               ))}
-              <div className="px-3 py-2">
-                <Button variant="cta" size="sm" className="w-full">
+              <div className="px-4 py-2">
+                <Button 
+                  variant={scrolled ? "cta" : "hero"} 
+                  size="sm" 
+                  className="w-full font-inter font-semibold"
+                >
+                  <span className="mr-2">📅</span>
                   Book Consultation
                 </Button>
               </div>
