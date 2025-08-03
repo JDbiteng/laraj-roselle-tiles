@@ -52,6 +52,11 @@ export default {
 					DEFAULT: 'hsl(var(--card))',
 					foreground: 'hsl(var(--card-foreground))'
 				},
+				// Custom LaRaj Tiles colors
+				'marble-light': 'hsl(var(--marble-light))',
+				'marble-dark': 'hsl(var(--marble-dark))',
+				'stone-warm': 'hsl(var(--stone-warm))',
+				'gold-accent': 'hsl(var(--gold-accent))',
 				sidebar: {
 					DEFAULT: 'hsl(var(--sidebar-background))',
 					foreground: 'hsl(var(--sidebar-foreground))',
@@ -67,6 +72,20 @@ export default {
 				lg: 'var(--radius)',
 				md: 'calc(var(--radius) - 2px)',
 				sm: 'calc(var(--radius) - 4px)'
+			},
+			backgroundImage: {
+				'gradient-hero': 'var(--gradient-hero)',
+				'gradient-marble': 'var(--gradient-marble)',
+				'gradient-warm': 'var(--gradient-warm)',
+			},
+			boxShadow: {
+				'elegant': 'var(--shadow-elegant)',
+				'marble': 'var(--shadow-marble)',
+				'soft': 'var(--shadow-soft)',
+			},
+			transitionProperty: {
+				'smooth': 'var(--transition-smooth)',
+				'bounce': 'var(--transition-bounce)',
 			},
 			keyframes: {
 				'accordion-down': {
