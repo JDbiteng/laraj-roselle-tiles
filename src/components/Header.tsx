@@ -34,25 +34,24 @@ const Header = () => {
     }`}>
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
-          {/* Artistic Logo */}
-          <div className="flex-shrink-0 group cursor-pointer">
+          {/* Logo */}
+          <Link to="/" className="flex-shrink-0 group cursor-pointer">
             <div className="flex items-center space-x-3">
               <div className="relative">
-                <div className="w-10 h-10 bg-gradient-to-br from-primary to-gold-accent rounded-lg flex items-center justify-center shadow-marble">
-                  <span className="text-white font-playfair font-bold text-lg">L</span>
-                </div>
+                <img 
+                  src="/lovable-uploads/a196f97f-f01f-4a60-934b-dfb204830be2.png" 
+                  alt="LaRaj Tile & Marble" 
+                  className="h-12 w-auto object-contain filter brightness-0 invert opacity-90 group-hover:opacity-100 transition-opacity duration-300"
+                />
                 <div className="absolute -top-1 -right-1 w-3 h-3 bg-gold-accent rounded-full animate-pulse"></div>
               </div>
               <div>
-                <h1 className="text-2xl font-playfair font-bold bg-gradient-to-r from-gold-accent to-primary bg-clip-text text-transparent">
-                  LaRaj Tiles
-                </h1>
                 <p className="text-xs font-inter text-muted-foreground uppercase tracking-wider">
                   Since 2004
                 </p>
               </div>
             </div>
-          </div>
+          </Link>
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex space-x-8">
