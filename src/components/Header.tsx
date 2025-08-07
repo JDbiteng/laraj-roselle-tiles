@@ -38,11 +38,14 @@ const Header = () => {
           <Link to="/" className="flex-shrink-0 group cursor-pointer">
             <div className="flex items-center space-x-3">
               <div className="relative">
-                <img 
-                  src="/lovable-uploads/a196f97f-f01f-4a60-934b-dfb204830be2.png" 
-                  alt="LaRaj Tile & Marble" 
-                  className="h-12 w-auto object-contain filter brightness-0 invert opacity-90 group-hover:opacity-100 transition-opacity duration-300"
-                />
+                <div className="text-left">
+                  <div className="text-3xl font-playfair font-bold bg-gradient-to-r from-gold-accent to-primary bg-clip-text text-transparent italic">
+                    LaRaj
+                  </div>
+                  <div className="text-sm font-inter font-black tracking-widest text-foreground -mt-1">
+                    TILE & MARBLE
+                  </div>
+                </div>
                 <div className="absolute -top-1 -right-1 w-3 h-3 bg-gold-accent rounded-full animate-pulse"></div>
               </div>
               <div>
