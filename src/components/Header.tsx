@@ -1,10 +1,12 @@
 import { Button } from "@/components/ui/button";
 import { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const location = useLocation();
+  const isHomePage = location.pathname === "/";
 
   useEffect(() => {
     const handleScroll = () => {
@@ -24,9 +26,11 @@ const Header = () => {
 
   return (
     <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
-      scrolled 
-        ? 'bg-white/95 backdrop-blur-xl border-b border-stone-warm shadow-elegant' 
-        : 'bg-white/10 backdrop-blur-md border-b border-white/10'
+      isHomePage
+        ? (scrolled 
+            ? 'bg-white/95 backdrop-blur-xl border-b border-stone-warm shadow-elegant' 
+            : 'bg-white/10 backdrop-blur-md border-b border-white/10')
+        : 'bg-black/95 backdrop-blur-xl border-b border-stone-warm/20 shadow-elegant'
     }`}>
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
@@ -57,9 +61,11 @@ const Header = () => {
                 key={item.name}
                 to={item.href}
                 className={`relative font-inter font-medium transition-all duration-300 group ${
-                  scrolled 
-                    ? 'text-marble-dark hover:text-primary' 
-                    : 'text-white/90 hover:text-white'
+                  isHomePage
+                    ? (scrolled 
+                        ? 'text-marble-dark hover:text-primary' 
+                        : 'text-white/90 hover:text-white')
+                    : 'text-white/90 hover:text-gold-accent'
                 }`}
                 style={{ animationDelay: `${index * 100}ms` }}
               >
@@ -73,7 +79,7 @@ const Header = () => {
           <div className="hidden md:block">
             <Link to="/book-consultation">
               <Button 
-                variant={scrolled ? "cta" : "hero"} 
+                variant={isHomePage ? (scrolled ? "cta" : "hero") : "hero"}
                 size="sm" 
                 className="font-inter font-semibold shadow-elegant hover:shadow-marble transition-all duration-500 group relative overflow-hidden"
               >
@@ -90,8 +96,10 @@ const Header = () => {
           <button
             onClick={() => setIsMenuOpen(!isMenuOpen)}
             className={`md:hidden transition-colors duration-300 p-2 rounded-lg ${
-              scrolled 
-                ? 'text-marble-dark hover:text-primary hover:bg-stone-warm/20' 
+              isHomePage
+                ? (scrolled 
+                    ? 'text-marble-dark hover:text-primary hover:bg-stone-warm/20' 
+                    : 'text-white hover:text-gold-accent hover:bg-white/10')
                 : 'text-white hover:text-gold-accent hover:bg-white/10'
             }`}
             aria-label="Toggle menu"
@@ -115,9 +123,11 @@ const Header = () => {
                   key={item.name}
                   to={item.href}
                   className={`block px-4 py-3 rounded-lg font-inter font-medium transition-all duration-300 ${
-                    scrolled
-                      ? 'text-marble-dark hover:text-primary hover:bg-stone-warm/20'
-                      : 'text-white/90 hover:text-white hover:bg-white/10'
+                    isHomePage
+                      ? (scrolled
+                          ? 'text-marble-dark hover:text-primary hover:bg-stone-warm/20'
+                          : 'text-white/90 hover:text-white hover:bg-white/10')
+                      : 'text-white/90 hover:text-gold-accent hover:bg-white/10'
                   }`}
                   onClick={() => setIsMenuOpen(false)}
                   style={{ animationDelay: `${index * 100}ms` }}
@@ -128,7 +138,7 @@ const Header = () => {
               <div className="px-4 py-2">
                 <Link to="/book-consultation" className="block">
                   <Button 
-                    variant={scrolled ? "cta" : "hero"} 
+                    variant={isHomePage ? (scrolled ? "cta" : "hero") : "hero"} 
                     size="sm" 
                     className="w-full font-inter font-semibold"
                   >
