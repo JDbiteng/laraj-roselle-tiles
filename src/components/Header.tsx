@@ -43,9 +43,7 @@ const Header = () => {
                 <h1 className="text-2xl font-playfair font-bold bg-gradient-to-r from-gold-accent to-primary bg-clip-text text-transparent">
                   LaRaj Tiles
                 </h1>
-                <p className={`text-xs font-inter transition-colors duration-300 ${
-                  scrolled ? 'text-muted-foreground' : 'text-white/70'
-                } uppercase tracking-wider`}>
+                <p className="text-xs font-inter text-muted-foreground uppercase tracking-wider">
                   Since 2004
                 </p>
               </div>
