@@ -41,7 +41,7 @@ const Header = () => {
               </div>
               <div>
                 <h1 className={`text-2xl font-playfair font-bold transition-colors duration-300 ${
-                  scrolled ? 'text-primary' : 'text-white'
+                  scrolled ? 'bg-gradient-to-r from-primary to-gold-accent bg-clip-text text-transparent' : 'bg-gradient-to-r from-gold-accent to-primary bg-clip-text text-transparent'
                 }`}>
                   LaRaj Tiles
                 </h1>

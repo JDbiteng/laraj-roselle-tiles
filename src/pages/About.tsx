@@ -20,7 +20,7 @@ const About = () => {
         <section className="py-20 bg-gradient-to-br from-marble-light via-stone-warm to-marble-medium">
           <div className="container mx-auto px-4 text-center">
             <h1 className="text-5xl sm:text-6xl lg:text-7xl font-playfair font-bold text-marble-dark mb-6 animate-fade-in">
-              Family-Owned. Locally Trusted. Design-Obsessed.
+              Two Partners. One Vision. Design Excellence.
             </h1>
           </div>
         </section>
@@ -34,8 +34,8 @@ const About = () => {
                 <CardContent className="p-8">
                   <p className="text-xl text-marble-medium leading-relaxed font-inter">
                     LaRaj Tile & Marble has been proudly serving Roselle Park and the surrounding communities for over 20 years. 
-                    We believe choosing tile should be a creative and enjoyable process — not overwhelming or confusing. 
-                    That's why we've built a showroom that feels personal and a team that treats every customer like family.
+                    Founded by two passionate partners devoted to their craft, we believe choosing tile should be a creative and enjoyable process — not overwhelming or confusing. 
+                    That's why we've built a showroom that feels personal and a team that treats every customer with expertise and care.
                   </p>
                 </CardContent>
               </Card>
