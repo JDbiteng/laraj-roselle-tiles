@@ -40,9 +40,7 @@ const Header = () => {
                 <div className="absolute -top-1 -right-1 w-3 h-3 bg-gold-accent rounded-full animate-pulse"></div>
               </div>
               <div>
-                <h1 className={`text-2xl font-playfair font-bold transition-colors duration-300 ${
-                  scrolled ? 'bg-gradient-to-r from-primary to-gold-accent bg-clip-text text-transparent' : 'bg-gradient-to-r from-gold-accent to-primary bg-clip-text text-transparent'
-                }`}>
+                <h1 className="text-2xl font-playfair font-bold bg-gradient-to-r from-gold-accent to-primary bg-clip-text text-transparent">
                   LaRaj Tiles
                 </h1>
                 <p className={`text-xs font-inter transition-colors duration-300 ${
