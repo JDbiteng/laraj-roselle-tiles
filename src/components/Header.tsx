@@ -42,7 +42,9 @@ const Header = () => {
                   <div className="text-3xl font-playfair font-bold bg-gradient-to-r from-gold-accent to-primary bg-clip-text text-transparent italic">
                     LaRaj
                   </div>
-                  <div className="text-sm font-inter font-black tracking-widest text-foreground -mt-1">
+                  <div className={`text-sm font-inter font-black tracking-widest -mt-1 ${
+                    isHomePage ? 'text-foreground' : 'text-white'
+                  }`}>
                     TILE & MARBLE
                   </div>
                 </div>
