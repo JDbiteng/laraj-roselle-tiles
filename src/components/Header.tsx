@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -14,11 +15,11 @@ const Header = () => {
   }, []);
 
   const navigation = [
-    { name: "Home", href: "#" },
-    { name: "Gallery", href: "#gallery" },
-    { name: "Reviews", href: "#reviews" },
-    { name: "About", href: "#about" },
-    { name: "Contact", href: "#contact" }
+    { name: "Home", href: "/" },
+    { name: "Gallery", href: "/gallery" },
+    { name: "Reviews", href: "/reviews" },
+    { name: "About", href: "/about" },
+    { name: "Contact", href: "/contact" }
   ];
 
   return (
@@ -56,9 +57,9 @@ const Header = () => {
           {/* Desktop Navigation */}
           <nav className="hidden md:flex space-x-8">
             {navigation.map((item, index) => (
-              <a
+              <Link
                 key={item.name}
-                href={item.href}
+                to={item.href}
                 className={`relative font-inter font-medium transition-all duration-300 group ${
                   scrolled 
                     ? 'text-marble-dark hover:text-primary' 
@@ -68,23 +69,25 @@ const Header = () => {
               >
                 {item.name}
                 <div className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-primary to-gold-accent transition-all duration-300 group-hover:w-full"></div>
-              </a>
+              </Link>
             ))}
           </nav>
 
           {/* Enhanced CTA Button */}
           <div className="hidden md:block">
-            <Button 
-              variant={scrolled ? "cta" : "hero"} 
-              size="sm" 
-              className="font-inter font-semibold shadow-elegant hover:shadow-marble transition-all duration-500 group relative overflow-hidden"
-            >
-              <span className="relative z-10 flex items-center">
-                <span className="mr-2 text-sm">📅</span>
-                Book Consultation
-              </span>
-              <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-700"></div>
-            </Button>
+            <Link to="/book-consultation">
+              <Button 
+                variant={scrolled ? "cta" : "hero"} 
+                size="sm" 
+                className="font-inter font-semibold shadow-elegant hover:shadow-marble transition-all duration-500 group relative overflow-hidden"
+              >
+                <span className="relative z-10 flex items-center">
+                  <span className="mr-2 text-sm">📅</span>
+                  Book Consultation
+                </span>
+                <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-700"></div>
+              </Button>
+            </Link>
           </div>
 
           {/* Enhanced Mobile menu button */}
@@ -112,9 +115,9 @@ const Header = () => {
           <div className="md:hidden py-6 border-t border-stone-warm/20 animate-fade-in">
             <nav className="space-y-4">
               {navigation.map((item, index) => (
-                <a
+                <Link
                   key={item.name}
-                  href={item.href}
+                  to={item.href}
                   className={`block px-4 py-3 rounded-lg font-inter font-medium transition-all duration-300 ${
                     scrolled
                       ? 'text-marble-dark hover:text-primary hover:bg-stone-warm/20'
@@ -124,17 +127,19 @@ const Header = () => {
                   style={{ animationDelay: `${index * 100}ms` }}
                 >
                   {item.name}
-                </a>
+                </Link>
               ))}
               <div className="px-4 py-2">
-                <Button 
-                  variant={scrolled ? "cta" : "hero"} 
-                  size="sm" 
-                  className="w-full font-inter font-semibold"
-                >
-                  <span className="mr-2">📅</span>
-                  Book Consultation
-                </Button>
+                <Link to="/book-consultation" className="block">
+                  <Button 
+                    variant={scrolled ? "cta" : "hero"} 
+                    size="sm" 
+                    className="w-full font-inter font-semibold"
+                  >
+                    <span className="mr-2">📅</span>
+                    Book Consultation
+                  </Button>
+                </Link>
               </div>
             </nav>
           </div>
