@@ -1,11 +1,11 @@
 const Footer = () => {
   const navigation = [
-    { name: "Home", href: "#" },
-    { name: "Gallery", href: "#gallery" },
-    { name: "Reviews", href: "#reviews" },
-    { name: "About Us", href: "#about" },
-    { name: "Book Consultation", href: "#consultation" },
-    { name: "Contact", href: "#contact" }
+    { name: "Home", href: "/" },
+    { name: "Gallery", href: "/gallery" },
+    { name: "Reviews", href: "/reviews" },
+    { name: "About Us", href: "/about" },
+    { name: "Book Consultation", href: "/book-consultation" },
+    { name: "Contact", href: "/contact" }
   ];
 
   return (
@@ -52,7 +52,7 @@ const Footer = () => {
             <h4 className="text-lg font-semibold text-white mb-4">Connect With Us</h4>
             <div className="space-y-3">
               <a
-                href="#"
+                href="/instagram"
                 className="flex items-center space-x-2 text-marble-light/80 hover:text-gold-accent transition-colors duration-300"
               >
                 <span>📷</span>

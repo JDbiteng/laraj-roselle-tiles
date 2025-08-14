@@ -12,6 +12,7 @@ import Blog from "./pages/Blog";
 import BlogPost from "./pages/BlogPost";
 import BookConsultationPage from "./pages/BookConsultation";
 import Contact from "./pages/Contact";
+import Instagram from "./pages/Instagram";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -42,6 +43,7 @@ const App = () => (
           <Route path="/blog/:id" element={<BlogPost />} />
           <Route path="/book-consultation" element={<BookConsultationPage />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/instagram" element={<Instagram />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
