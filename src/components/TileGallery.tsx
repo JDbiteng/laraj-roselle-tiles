@@ -153,15 +153,19 @@ const TileGallery = () => {
           </div>
           
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <Button variant="cta" size="lg" className="text-lg px-10 py-4 font-inter font-semibold shadow-elegant hover:shadow-2xl transition-all duration-500 group">
-              <span className="mr-2 text-xl">📍</span>
-              Visit Our Showroom
-              <div className="absolute inset-0 rounded-lg bg-gradient-to-r from-transparent via-white/5 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-700"></div>
+            <Button variant="cta" size="lg" className="text-lg px-10 py-4 font-inter font-semibold shadow-elegant hover:shadow-2xl transition-all duration-500 group" asChild>
+              <a href="/gallery">
+                <span className="mr-2 text-xl">📍</span>
+                Visit Our Showroom
+                <div className="absolute inset-0 rounded-lg bg-gradient-to-r from-transparent via-white/5 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-700"></div>
+              </a>
             </Button>
             
-            <Button variant="marble" size="lg" className="text-lg px-10 py-4 font-inter">
-              <span className="mr-2">📞</span>
-              Schedule Your Visit
+            <Button variant="marble" size="lg" className="text-lg px-10 py-4 font-inter" asChild>
+              <a href="tel:+19088888888">
+                <span className="mr-2">📞</span>
+                Schedule Your Visit
+              </a>
             </Button>
           </div>
         </div>

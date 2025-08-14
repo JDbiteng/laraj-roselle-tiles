@@ -59,27 +59,48 @@ const BookConsultationPage = () => {
                   <h3 className="text-2xl font-playfair font-bold text-marble-dark mb-4">
                     Prefer to stop by instead?
                   </h3>
-                  <p className="text-lg text-marble-medium mb-6 font-inter">
+                  <p className="text-lg text-marble-medium mb-4 font-inter">
                     We welcome walk-ins during store hours:
                   </p>
+                  <div className="text-marble-medium font-inter space-y-1 mb-6">
+                    <p>Mon–Fri: 10:00am – 3:00pm</p>
+                    <p>Sat–Sun: By appointment</p>
+                    <a 
+                      href="https://calendly.com/laraj-tiles" 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="inline-block mt-2 text-primary hover:text-primary/80 transition-colors text-sm font-medium"
+                    >
+                      Schedule Weekend Appointment →
+                    </a>
+                  </div>
                   
                   <div className="space-y-3 mb-8">
                     <div className="flex items-center justify-center space-x-2">
                       <span className="text-xl">🕒</span>
-                      <span className="text-lg font-inter text-marble-dark">Mon–Sat: 9:00am – 5:30pm</span>
+                      <span className="text-lg font-inter text-marble-dark">Mon–Fri: 10:00am – 3:00pm</span>
                     </div>
                     <div className="flex items-center justify-center space-x-2">
-                      <span className="text-xl">🛑</span>
-                      <span className="text-lg font-inter text-marble-dark">Sunday: Closed</span>
+                      <span className="text-xl">📅</span>
+                      <span className="text-lg font-inter text-marble-dark">Sat–Sun: By appointment</span>
                     </div>
                     <div className="flex items-center justify-center space-x-2">
                       <span className="text-xl">📍</span>
-                      <span className="text-lg font-inter text-marble-dark">324 Westfield Ave W, Roselle Park, NJ 07204</span>
+                      <a 
+                        href="https://maps.apple.com/?q=324+Westfield+Ave+W,+Roselle+Park,+NJ+07204" 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                        className="text-lg font-inter text-marble-dark hover:text-primary transition-colors cursor-pointer"
+                      >
+                        324 Westfield Ave W, Roselle Park, NJ 07204
+                      </a>
                     </div>
                   </div>
                   
-                  <Button variant="cta" size="lg" className="text-lg px-8 py-4">
-                    📞 Call Us Now
+                  <Button variant="cta" size="lg" className="text-lg px-8 py-4" asChild>
+                    <a href="tel:+19088888888">
+                      📞 Call Us Now
+                    </a>
                   </Button>
                 </CardContent>
               </Card>

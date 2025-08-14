@@ -19,8 +19,15 @@ const Footer = () => {
               Expert tile guidance serving Roselle Park and surrounding areas for over 20 years.
             </p>
             <div className="text-sm text-marble-light/70">
-              <p>324 Westfield Ave W</p>
-              <p>Roselle Park, NJ 07204</p>
+              <a 
+                href="https://maps.apple.com/?q=324+Westfield+Ave+W,+Roselle+Park,+NJ+07204" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="hover:text-marble-light transition-colors cursor-pointer"
+              >
+                <p>324 Westfield Ave W</p>
+                <p>Roselle Park, NJ 07204</p>
+              </a>
             </div>
           </div>
 

@@ -19,7 +19,14 @@ const VisitUs = () => {
                     <div className="text-2xl">📍</div>
                     <div>
                       <h3 className="font-semibold text-lg text-marble-dark mb-1">Address</h3>
-                      <p className="text-muted-foreground">324 Westfield Ave W, Roselle Park, NJ 07204</p>
+                      <a 
+                        href="https://maps.apple.com/?q=324+Westfield+Ave+W,+Roselle+Park,+NJ+07204" 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                        className="text-muted-foreground hover:text-primary transition-colors cursor-pointer"
+                      >
+                        324 Westfield Ave W, Roselle Park, NJ 07204
+                      </a>
                     </div>
                   </div>
 
@@ -27,7 +34,12 @@ const VisitUs = () => {
                     <div className="text-2xl">📞</div>
                     <div>
                       <h3 className="font-semibold text-lg text-marble-dark mb-1">Phone</h3>
-                      <p className="text-muted-foreground">(908) [insert number]</p>
+                      <a 
+                        href="tel:+19088888888" 
+                        className="text-muted-foreground hover:text-primary transition-colors cursor-pointer"
+                      >
+                        (908) 888-8888
+                      </a>
                     </div>
                   </div>
 
@@ -36,11 +48,19 @@ const VisitUs = () => {
                     <div>
                       <h3 className="font-semibold text-lg text-marble-dark mb-2">Hours</h3>
                       <div className="space-y-1 text-muted-foreground">
-                        <p>Mon–Sat: 9:00am – 5:30pm</p>
+                        <p>Mon–Fri: 10:00am – 3:00pm</p>
                         <p className="flex items-center space-x-2">
-                          <span>🛑</span>
-                          <span>Sunday: Closed</span>
+                          <span>📅</span>
+                          <span>Sat–Sun: By appointment</span>
                         </p>
+                        <a 
+                          href="https://calendly.com/laraj-tiles" 
+                          target="_blank" 
+                          rel="noopener noreferrer"
+                          className="inline-block mt-2 text-primary hover:text-primary/80 transition-colors text-sm font-medium"
+                        >
+                          Schedule Weekend Appointment →
+                        </a>
                       </div>
                     </div>
                   </div>

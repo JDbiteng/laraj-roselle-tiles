@@ -40,7 +40,14 @@ const Contact = () => {
                       </div>
                       <div>
                         <h3 className="font-playfair font-bold text-marble-dark text-lg mb-1">Visit Our Showroom</h3>
-                        <p className="text-marble-medium font-inter">324 Westfield Ave W, Roselle Park, NJ 07204</p>
+                        <a 
+                          href="https://maps.apple.com/?q=324+Westfield+Ave+W,+Roselle+Park,+NJ+07204" 
+                          target="_blank" 
+                          rel="noopener noreferrer"
+                          className="text-marble-medium font-inter hover:text-primary transition-colors cursor-pointer"
+                        >
+                          324 Westfield Ave W, Roselle Park, NJ 07204
+                        </a>
                       </div>
                     </div>
                     
@@ -71,8 +78,16 @@ const Contact = () => {
                       <div>
                         <h3 className="font-playfair font-bold text-marble-dark text-lg mb-1">Store Hours</h3>
                         <div className="text-marble-medium font-inter space-y-1">
-                          <p>Mon–Sat: 9:00am – 5:30pm</p>
-                          <p>Sunday: Closed</p>
+                          <p>Mon–Fri: 10:00am – 3:00pm</p>
+                          <p>Sat–Sun: By appointment</p>
+                          <a 
+                            href="https://calendly.com/laraj-tiles" 
+                            target="_blank" 
+                            rel="noopener noreferrer"
+                            className="inline-block mt-2 text-primary hover:text-primary/80 transition-colors text-sm font-medium"
+                          >
+                            Schedule Weekend Appointment →
+                          </a>
                         </div>
                       </div>
                     </div>
