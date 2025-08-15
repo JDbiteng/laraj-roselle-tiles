@@ -129,7 +129,7 @@ Elevate your Summit home with stonework that balances heritage and modern luxury
           
           <div className="aspect-video bg-muted rounded-lg mb-8 overflow-hidden">
             <img
-              src="/placeholder.svg"
+              src={parseInt(id || "0") <= 6 ? `/lovable-uploads/adbf0dd4-02a9-44e8-901c-ce17920213f3.png` : `/placeholder.svg`}
               alt={currentPost.title}
               className="w-full h-full object-cover"
             />
