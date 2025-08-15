@@ -80,7 +80,7 @@ const About = () => {
               Ready to meet with our team?
             </h2>
             <Button variant="hero" size="lg" className="text-lg px-10 py-5 rounded-full">
-              Meet With Our Team
+              Book Your Consultation
             </Button>
           </div>
         </section>
