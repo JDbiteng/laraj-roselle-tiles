@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
+import { Link } from "react-router-dom";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 
@@ -79,9 +80,11 @@ const About = () => {
             <h2 className="text-3xl sm:text-4xl font-playfair font-bold text-white mb-6">
               Ready to meet with our team?
             </h2>
-            <Button variant="hero" size="lg" className="text-lg px-10 py-5 rounded-full">
-              Book Your Consultation
-            </Button>
+            <Link to="/book-consultation">
+              <Button variant="hero" size="lg" className="text-lg px-10 py-5 rounded-full">
+                Book Your Consultation
+              </Button>
+            </Link>
           </div>
         </section>
       </main>
