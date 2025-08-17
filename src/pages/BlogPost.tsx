@@ -78,6 +78,42 @@ Our experienced design team collaborates with Summit homeowners to select stone 
 From initial concept sketches to the final polish, every step is handled with precision. Plus, our Roselle Park showroom houses expansive slab displays and tile samples so you can touch, feel, and visualize your project before installation.
 
 Elevate your Summit home with stonework that balances heritage and modern luxury. Schedule your design consultation now.`
+    },
+    "6": {
+      title: "Luxury Bathroom Renovations: Transform Your Space",
+      content: `Transform your bathroom into a spa-like sanctuary with LaRaj Tile & Marble's luxury renovation services. We specialize in creating stunning bathroom spaces that combine functionality with elegant design.
+
+Our bathroom renovation services include:
+
+• Custom walk-in showers with frameless glass enclosures
+• Luxurious marble and porcelain tile installations
+• Heated bathroom floors for ultimate comfort
+• Designer vanities with quartz and marble countertops
+• Custom tile niches and built-in storage solutions
+
+From concept to completion, our experienced team handles every aspect of your bathroom renovation. We work with top-quality materials and the latest design trends to create spaces that reflect your personal style while adding value to your home.
+
+Our Roselle Park showroom features full bathroom displays where you can see and feel the quality of our work firsthand. We provide 3D renderings and detailed project planning to ensure your vision becomes reality.
+
+Ready to transform your bathroom into a luxury retreat? Schedule your free consultation today.`
+    },
+    "7": {
+      title: "Luxury Bathroom Renovations: Transform Your Space",
+      content: `Transform your bathroom into a spa-like sanctuary with LaRaj Tile & Marble's luxury renovation services. We specialize in creating stunning bathroom spaces that combine functionality with elegant design.
+
+Our bathroom renovation services include:
+
+• Custom walk-in showers with frameless glass enclosures
+• Luxurious marble and porcelain tile installations
+• Heated bathroom floors for ultimate comfort
+• Designer vanities with quartz and marble countertops
+• Custom tile niches and built-in storage solutions
+
+From concept to completion, our experienced team handles every aspect of your bathroom renovation. We work with top-quality materials and the latest design trends to create spaces that reflect your personal style while adding value to your home.
+
+Our Roselle Park showroom features full bathroom displays where you can see and feel the quality of our work firsthand. We provide 3D renderings and detailed project planning to ensure your vision becomes reality.
+
+Ready to transform your bathroom into a luxury retreat? Schedule your free consultation today.`
     }
   };
 
