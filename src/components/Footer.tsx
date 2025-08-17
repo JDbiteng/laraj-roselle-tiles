@@ -59,11 +59,13 @@ const Footer = () => {
                 <span>Instagram</span>
               </a>
               <a
-                href="#"
+                href="https://www.facebook.com/profile.php?id=100063591131288"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="flex items-center space-x-2 text-marble-light/80 hover:text-gold-accent transition-colors duration-300"
               >
-                <span>⭐</span>
-                <span>Google Reviews</span>
+                <span>📘</span>
+                <span>Facebook</span>
               </a>
             </div>
           </div>

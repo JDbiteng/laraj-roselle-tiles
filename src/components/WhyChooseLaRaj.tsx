@@ -58,9 +58,11 @@ const WhyChooseLaRaj = () => {
         </div>
 
         <div className="text-center">
-          <Button variant="marble" size="lg" className="text-lg px-8 py-4">
-            Learn More About Our Team
-          </Button>
+          <a href="/about">
+            <Button variant="marble" size="lg" className="text-lg px-8 py-4">
+              Learn More About Our Team
+            </Button>
+          </a>
         </div>
       </div>
     </section>

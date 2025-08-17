@@ -1,5 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
+import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover";
+import { Phone, MapPin } from "lucide-react";
 
 const BookConsultation = () => {
   return (
@@ -38,9 +40,40 @@ const BookConsultation = () => {
                 </div>
 
                 <div className="text-center pt-4">
-                  <Button variant="cta" size="lg" className="text-lg px-8 py-4">
-                    Call Now or Stop By
-                  </Button>
+                  <Popover>
+                    <PopoverTrigger asChild>
+                      <Button variant="cta" size="lg" className="text-lg px-8 py-4">
+                        Call Now or Stop By
+                      </Button>
+                    </PopoverTrigger>
+                    <PopoverContent className="w-64 p-4">
+                      <div className="space-y-3">
+                        <h4 className="font-semibold text-center mb-3">Contact Options</h4>
+                        <a 
+                          href="tel:+19082450007" 
+                          className="flex items-center space-x-3 p-3 rounded-lg hover:bg-accent transition-colors group"
+                        >
+                          <Phone className="h-5 w-5 text-primary group-hover:scale-110 transition-transform" />
+                          <div>
+                            <div className="font-medium">Call Us</div>
+                            <div className="text-sm text-muted-foreground">(908) 245-0007</div>
+                          </div>
+                        </a>
+                        <a 
+                          href="https://maps.apple.com/?q=324+Westfield+Ave+W,+Roselle+Park,+NJ+07204" 
+                          target="_blank" 
+                          rel="noopener noreferrer"
+                          className="flex items-center space-x-3 p-3 rounded-lg hover:bg-accent transition-colors group"
+                        >
+                          <MapPin className="h-5 w-5 text-primary group-hover:scale-110 transition-transform" />
+                          <div>
+                            <div className="font-medium">View Location</div>
+                            <div className="text-sm text-muted-foreground">Get directions</div>
+                          </div>
+                        </a>
+                      </div>
+                    </PopoverContent>
+                  </Popover>
                 </div>
               </div>
             </CardContent>

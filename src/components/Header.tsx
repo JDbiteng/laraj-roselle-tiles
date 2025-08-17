@@ -37,13 +37,13 @@ const Header = () => {
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
           <Link to="/" className="flex-shrink-0 group cursor-pointer">
-            <div className="flex items-center space-x-3">
+            <div className="flex items-center space-x-4">
               <div className="relative">
                 <div className="text-left">
                   <div className="text-3xl font-playfair font-bold bg-gradient-to-r from-gold-accent to-primary bg-clip-text text-transparent italic">
                     LaRaj
                   </div>
-                  <div className={`text-sm font-inter font-black tracking-widest -mt-1 ${
+                  <div className={`text-sm font-inter font-black tracking-widest mt-0.5 ${
                     isHomePage ? 'text-foreground' : 'text-white'
                   }`}>
                     TILE & MARBLE
@@ -51,7 +51,7 @@ const Header = () => {
                 </div>
                 <div className="absolute -top-1 -right-1 w-3 h-3 bg-gold-accent rounded-full animate-pulse"></div>
               </div>
-              <div>
+              <div className="ml-2">
                 <p className="text-xs font-inter text-muted-foreground uppercase tracking-wider">
                   Since 2004
                 </p>
