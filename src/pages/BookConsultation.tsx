@@ -98,7 +98,7 @@ const BookConsultationPage = () => {
                   </div>
                   
                   <Button variant="cta" size="lg" className="text-lg px-8 py-4" asChild>
-                    <a href="tel:+19088888888">
+                    <a href="tel:+19082595488">
                       📞 Call Us Now
                     </a>
                   </Button>

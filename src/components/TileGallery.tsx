@@ -162,7 +162,7 @@ const TileGallery = () => {
             </Button>
             
             <Button variant="marble" size="lg" className="text-lg px-10 py-4 font-inter" asChild>
-              <a href="tel:+19088888888">
+              <a href="tel:+19082595488">
                 <span className="mr-2">📞</span>
                 Schedule Your Visit
               </a>

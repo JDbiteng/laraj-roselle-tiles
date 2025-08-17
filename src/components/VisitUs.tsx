@@ -35,10 +35,10 @@ const VisitUs = () => {
                     <div>
                       <h3 className="font-semibold text-lg text-marble-dark mb-1">Phone</h3>
                       <a 
-                        href="tel:+19088888888" 
+                        href="tel:+19082595488" 
                         className="text-muted-foreground hover:text-primary transition-colors cursor-pointer"
                       >
-                        (908) 888-8888
+                        (908) 259-5488
                       </a>
                     </div>
                   </div>
