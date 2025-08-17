@@ -7,8 +7,8 @@ const Blog = () => {
   const blogPosts = Array.from({ length: 20 }, (_, i) => ({
     id: i + 1,
     title: `Blog Post ${i + 1}`,
-    image: i < 4 ? `/lovable-uploads/adbf0dd4-02a9-44e8-901c-ce17920213f3.png` : 
-           (i === 4 || i === 5 || i === 6) ? `/lovable-uploads/aef985fd-5ac6-49be-913c-c92622e09731.png` : 
+    image: i < 5 ? `/lovable-uploads/adbf0dd4-02a9-44e8-901c-ce17920213f3.png` : 
+           (i === 5 || i === 6) ? `/lovable-uploads/aef985fd-5ac6-49be-913c-c92622e09731.png` : 
            `/placeholder.svg`,
   }));
 

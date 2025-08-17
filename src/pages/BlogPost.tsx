@@ -78,6 +78,24 @@ Our experienced design team collaborates with Summit homeowners to select stone 
 From initial concept sketches to the final polish, every step is handled with precision. Plus, our Roselle Park showroom houses expansive slab displays and tile samples so you can touch, feel, and visualize your project before installation.
 
 Elevate your Summit home with stonework that balances heritage and modern luxury. Schedule your design consultation now.`
+    },
+    "5": {
+      title: "Berkeley Heights: Premium Tile Solutions for Modern Living",
+      content: `Berkeley Heights homeowners appreciate quality, style, and functionality in equal measure. At LaRaj Tile & Marble, we deliver sophisticated tile installations that enhance your home's value while reflecting your personal aesthetic.
+
+Our Berkeley Heights specialties include:
+
+• Large-format porcelain floors that create seamless, contemporary spaces
+• Designer backsplash installations featuring natural stone and glass mosaics
+• Luxury vinyl tile that mimics hardwood with superior moisture resistance
+• Custom shower systems with built-in niches and rainfall fixtures
+• Outdoor kitchen and dining area installations perfect for entertaining
+
+We understand Berkeley Heights' preference for clean lines and modern materials. Our Roselle Park showroom features the latest in tile technology—from anti-microbial surfaces to slip-resistant textures—all displayed in room-like settings so you can envision the final result.
+
+Our certified installers use advanced leveling systems and premium adhesives to ensure every tile is perfectly aligned and permanently secured. We also offer comprehensive maintenance programs to keep your installation looking pristine for decades.
+
+Transform your Berkeley Heights home with tile work that combines style and substance. Book your consultation today.`
     }
   };
 
@@ -129,7 +147,7 @@ Elevate your Summit home with stonework that balances heritage and modern luxury
           
           <div className="aspect-video bg-muted rounded-lg mb-8 overflow-hidden">
             <img
-              src={parseInt(id || "0") <= 4 ? `/lovable-uploads/adbf0dd4-02a9-44e8-901c-ce17920213f3.png` : 
+              src={parseInt(id || "0") <= 5 ? `/lovable-uploads/adbf0dd4-02a9-44e8-901c-ce17920213f3.png` : 
                    (parseInt(id || "0") === 6 || parseInt(id || "0") === 7) ? `/lovable-uploads/aef985fd-5ac6-49be-913c-c92622e09731.png` :
                    `/placeholder.svg`}
               alt={currentPost.title}
