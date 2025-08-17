@@ -50,13 +50,13 @@ const BookConsultation = () => {
                       <div className="space-y-3">
                         <h4 className="font-semibold text-center mb-3">Contact Options</h4>
                         <a 
-                          href="tel:+19082450007" 
+                          href="tel:+19082595488" 
                           className="flex items-center space-x-3 p-3 rounded-lg hover:bg-accent transition-colors group"
                         >
                           <Phone className="h-5 w-5 text-primary group-hover:scale-110 transition-transform" />
                           <div>
                             <div className="font-medium">Call Us</div>
-                            <div className="text-sm text-muted-foreground">(908) 245-0007</div>
+                            <div className="text-sm text-muted-foreground">(908) 259-5488</div>
                           </div>
                         </a>
                         <a 
