@@ -49,6 +49,7 @@ const HeroSection = () => {
               Guidance
             </h1>
             <div className="absolute -top-4 -right-8 w-16 h-1 bg-gold-accent animate-shimmer"></div>
+            <div className="absolute -top-4 -left-8 w-16 h-1 bg-gold-accent animate-shimmer"></div>
           </div>
           <div className="flex items-center justify-center space-x-4 animate-slide-in-left">
             <div className="h-px w-20 bg-gradient-to-r from-transparent to-white/50"></div>
