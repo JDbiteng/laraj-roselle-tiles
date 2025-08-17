@@ -58,7 +58,7 @@ const Header = () => {
           </Link>
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex space-x-8">
+          <nav className="hidden md:flex space-x-4">
             {navigation.map((item, index) => <Link key={item.name} to={item.href} className={`relative font-inter font-medium transition-all duration-300 group ${isHomePage ? scrolled ? 'text-marble-dark hover:text-primary' : 'text-white/90 hover:text-white' : 'text-white/90 hover:text-gold-accent'}`} style={{
             animationDelay: `${index * 100}ms`
           }}>
@@ -68,7 +68,7 @@ const Header = () => {
           </nav>
 
           {/* Enhanced CTA Button */}
-          <div className="hidden md:block">
+          <div className="hidden md:block ml-8 flex-shrink-0">
             <Link to="/book-consultation">
               <Button variant={isHomePage ? scrolled ? "cta" : "hero" : "hero"} size="sm" className="font-inter font-semibold shadow-elegant hover:shadow-marble transition-all duration-500 group relative overflow-hidden">
                 <span className="relative z-10 flex items-center mx-0">
