@@ -149,6 +149,7 @@ Transform your Berkeley Heights home with tile work that combines style and subs
             <img
               src={parseInt(id || "0") <= 5 ? `/lovable-uploads/adbf0dd4-02a9-44e8-901c-ce17920213f3.png` : 
                    (parseInt(id || "0") === 6 || parseInt(id || "0") === 7) ? `/lovable-uploads/aef985fd-5ac6-49be-913c-c92622e09731.png` :
+                   parseInt(id || "0") === 15 ? `/lovable-uploads/0a8785d5-a947-4497-a6df-c6dd19bae416.png` :
                    parseInt(id || "0") === 16 ? `/lovable-uploads/93cde2f3-c878-4225-afcd-92fb02f60d24.png` :
                    parseInt(id || "0") === 17 ? `/lovable-uploads/6b57e834-c6be-429c-8892-b787a95f916b.png` :
                    parseInt(id || "0") === 18 ? `/lovable-uploads/718c4d34-0cd4-4251-b540-079088fd8e32.png` :
