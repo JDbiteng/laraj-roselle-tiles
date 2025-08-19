@@ -9,6 +9,7 @@ const Blog = () => {
     title: `Blog Post ${i + 1}`,
     image: i < 5 ? `/lovable-uploads/adbf0dd4-02a9-44e8-901c-ce17920213f3.png` : 
            (i === 5 || i === 6) ? `/lovable-uploads/aef985fd-5ac6-49be-913c-c92622e09731.png` : 
+           i === 15 ? `/lovable-uploads/93cde2f3-c878-4225-afcd-92fb02f60d24.png` :
            i === 16 ? `/lovable-uploads/6b57e834-c6be-429c-8892-b787a95f916b.png` :
            i === 18 ? `/lovable-uploads/9d70774f-8cf6-412f-a6b1-c115f7050a9e.png` :
            i === 19 ? `/lovable-uploads/48993db1-e875-46e7-bae6-51ff24ff3da9.png` :
