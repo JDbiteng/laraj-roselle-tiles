@@ -38,19 +38,19 @@ const Header = () => {
           {/* Logo */}
           <Link to="/" className="flex-shrink-0 group cursor-pointer">
             <div className="flex items-center space-x-4">
-              <div className="relative">
-                <div className="text-left">
-                  <div className="text-3xl font-playfair font-bold bg-gradient-to-r from-gold-accent to-primary bg-clip-text text-transparent italic">
-                    LaRaj
-                  </div>
-                  <div className={`text-sm font-inter font-black tracking-widest mt-0.5 ${isHomePage ? 'text-foreground' : 'text-white'}`}>
-                    TILE & MARBLE
-                  </div>
-                </div>
-                <div className="absolute -top-1 -right-1 w-3 h-3 bg-gold-accent rounded-full animate-pulse"></div>
+              <div className="relative transition-all duration-300 group-hover:scale-105">
+                <img 
+                  src="/lovable-uploads/6bea09d2-784c-4c14-8b0c-80dc12416ee8.png" 
+                  alt="LaRaj Tile & Marble - Expert Tile Guidance Since 2004"
+                  className="h-12 w-auto object-contain"
+                  style={{
+                    filter: isHomePage && !scrolled ? 'brightness(0) invert(1)' : 'none'
+                  }}
+                />
+                <div className="absolute -top-1 -right-1 w-3 h-3 bg-gold-accent rounded-full animate-pulse opacity-80"></div>
               </div>
               <div className="ml-2">
-                <p className="text-xs font-inter text-muted-foreground uppercase tracking-wider mx-[11px]">
+                <p className={`text-xs font-inter uppercase tracking-wider transition-colors duration-300 ${isHomePage ? scrolled ? 'text-muted-foreground' : 'text-white/80' : 'text-white/80'}`}>
                   Since 2004
                 </p>
               </div>
