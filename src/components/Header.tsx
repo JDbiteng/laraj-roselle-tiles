@@ -40,7 +40,7 @@ const Header = () => {
             <div className="flex items-center space-x-4">
               <div className="relative transition-all duration-300 group-hover:scale-105">
                 <img 
-                  src="/lovable-uploads/4c4561dc-0908-464a-ba44-0ea442981555.png" 
+                  src="/lovable-uploads/6bea09d2-784c-4c14-8b0c-80dc12416ee8.png" 
                   alt="LaRaj Tile & Marble - Expert Tile Guidance Since 2004"
                   className="h-12 w-auto object-contain"
                   style={{
